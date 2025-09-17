@@ -1,4 +1,4 @@
-FROM python:3.10-slim-buster
+FROM python:3.10-slim-bullseye
 
 WORKDIR /usr/app
 
@@ -11,7 +11,7 @@ COPY dbt_project.yml /usr/app/dbt_project.yml
 
 # RUN python3 -m venv .venv/dbt
 # RUN source .venv/dbt/bin/activate
-RUN sudo apt install -y git-all
+RUN apt install -y git-all
 RUN pip install dbt-core dbt-postgres
 RUN dbt deps
 
