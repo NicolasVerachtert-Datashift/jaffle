@@ -3,7 +3,7 @@ jaffle_shop:
   outputs:
     dev:
       type: postgres
-      host: localhost
+      host: postgres
       user: admin
       password: admin
       dbname: jaffle_shop
