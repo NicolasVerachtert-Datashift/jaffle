@@ -6,7 +6,6 @@ order_items as (
 
 ),
 
-
 orders as (
 
     select * from {{ ref('stg_orders') }}
@@ -64,3 +63,4 @@ joined as (
 )
 
 select * from joined
+-- hello

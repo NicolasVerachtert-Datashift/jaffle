@@ -1,0 +1,12 @@
+jaffle_shop:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      user: admin
+      password: admin
+      dbname: jaffle_shop
+      port: 5432
+      schema: dbt
+      threads: 4

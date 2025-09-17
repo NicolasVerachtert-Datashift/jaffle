@@ -22,4 +22,4 @@ repos:
         description: "Lints sql files with `SQLFluff`"
         types: [sql]
         require_serial: true
-        additional_dependencies: []
+        additional_dependencies: ['dbt-postgres', 'sqlfluff-templater-dbt']
