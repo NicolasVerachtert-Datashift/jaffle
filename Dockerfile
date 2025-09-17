@@ -11,7 +11,11 @@ COPY dbt_project.yml /usr/app/dbt_project.yml
 
 # RUN python3 -m venv .venv/dbt
 # RUN source .venv/dbt/bin/activate
+RUN sudo apt install -y git-all
 RUN pip install dbt-core dbt-postgres
 RUN dbt deps
 
 CMD /bin/bash -c "dbt seed --full-refresh --vars '{\"load_source_data\": true}' && dbt run"
+
+
+# new line
